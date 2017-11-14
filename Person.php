@@ -30,6 +30,8 @@ class Person
         error_log("Person::hook");
         add_action('admin_init', array($THIS_CLASS, 'admin_init'));
         add_action('init', array($THIS_CLASS, 'register_post_type'));
+        add_filter('enter_title_here', array($THIS_CLASS, 'enter_title_here'),
+                   10, 2);
     }
 
     /**
@@ -88,6 +90,12 @@ class Person
             70                                         // Position
         );
    }
+
+    static function enter_title_here ($text, $post)
+    {
+        if ($post->post_type != "person") return $text;
+        return __x("Dr Firstname Lastname", "enter_title_here");
+    }
 }
 
 Person::hook();
