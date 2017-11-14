@@ -72,7 +72,7 @@ class Person
                 'has_archive'        => true,
                 'hierarchical'       => false,
                 'menu_position'      => null,
-                'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+                'supports'           => array( 'title', 'editor', 'thumbnail' )
             ));
         error_log("Person out");
     }
