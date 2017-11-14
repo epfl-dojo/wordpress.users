@@ -27,7 +27,6 @@ class Person
     static function hook ()
     {
         $THIS_CLASS = '\EPFL\Persons\Person';
-        error_log("Person::hook");
         add_action('admin_init', array($THIS_CLASS, 'admin_init'));
         add_action('init', array($THIS_CLASS, 'register_post_type'));
         add_filter('enter_title_here', array($THIS_CLASS, 'enter_title_here'),
@@ -75,7 +74,6 @@ class Person
                 'menu_icon'          => 'dashicons-welcome-learn-more',
                 'supports'           => array( 'title', 'editor', 'thumbnail' )
             ));
-        error_log("Person out");
     }
 
     static function admin_init ()
