@@ -72,6 +72,7 @@ class Person
                 'has_archive'        => true,
                 'hierarchical'       => false,
                 'menu_position'      => null,
+                'menu_icon'          => 'dashicons-welcome-learn-more',
                 'supports'           => array( 'title', 'editor', 'thumbnail' )
             ));
         error_log("Person out");
